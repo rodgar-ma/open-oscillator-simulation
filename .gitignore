@@ -1,0 +1,35 @@
+# Bytecode / cache
+__pycache__/
+*.py[cod]
+*.pyc
+
+# Empaquetado / instalación editable
+*.egg-info/
+build/
+dist/
+
+# Pytest
+.pytest_cache/
+
+# Entornos virtuales (por si alguien crea uno local dentro del repo)
+.venv/
+venv/
+env/
+
+# Herramientas comunes de testing/typing/coverage
+.coverage
+.coverage.*
+htmlcov/
+.mypy_cache/
+.ruff_cache/
+
+# Editor / IDE
+.vscode/
+.idea/
+
+# OS
+Thumbs.db
+.DS_Store
+
+# AI
+CONTEXT.md
