@@ -31,5 +31,8 @@ htmlcov/
 Thumbs.db
 .DS_Store
 
+# Figuras generadas por los scripts (regenerables)
+figures/
+
 # AI
 CONTEXT.md
