@@ -2,4 +2,9 @@ name: hydram
 channels:
   - defaults
 dependencies:
-  - python
+  - scipy
+  - numpy
+  - coolprop
+  - matplotlib
+  - pytest
+  - python=3.12
