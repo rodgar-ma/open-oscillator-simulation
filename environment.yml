@@ -1,5 +1,5 @@
 name: hydram
 channels:
   - defaults
-dependencies: []
-prefix: C:\Users\marod\miniconda3\envs\hydram
+dependencies:
+  - python
