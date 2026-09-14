@@ -122,27 +122,17 @@ hydram/
 ├── pyproject.toml
 ├── src/utube/
 │   ├── column.py        # frozen dataclass: geometry + derived quantities
-│   └── dynamics.py       # rhs, specific_energy, simulate
+│   └── dynamics.py      # rhs, specific_energy, simulate
 ├── tests/
-│   └── test_step1.py     # steps 1-2: analytic match, energy, isochronism, damping
+│   └── test_step1.py    # steps 1-2: analytic match, energy, isochronism, damping
 ├── scripts/
-│   ├── run_step1.py       # figures for step 1
-│   └── run_step2.py       # figures for step 2
-└── assets/                # figures committed for this README
+│   ├── run_step1.py     # figures for step 1
+│   └── run_step2.py     # figures for step 2
+└── assets/              # figures committed for this README
 ```
 
 `Column` is `frozen=True` so a simulation run can never mutate its own parameters
 mid-integration.
-
-## Future work
-
-Out of scope for this model, but relevant follow-ups if extended:
-
-- Two-phase CFD of the bubble (`interFoam`, Schnerr–Sauer) to check the lumped
-  phase-change closure against a resolved interface.
-- Coupled Rayleigh–Plesset to determine whether evaporation is interface- or
-  nucleation-limited.
-- Benchmarking against `Modelica.Fluid` as the sector's standard tool.
 
 ## References
 
