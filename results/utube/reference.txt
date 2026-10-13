@@ -1,0 +1,14 @@
+period                       4.486 s
+steam ejected / cycle        98.82 g  (79.3 kg/h)
+flash / evap / cond / fog    142.7 / 49.3 / 91.2 / 2.0 g
+steam power (net)            61.61 kW
+drive work / cycle           69.23 kJ  (pV 60.36, friction 8.87)
+waste heat / cycle          207.15 kJ
+work share of steam energy    25.0 %
+2nd-law efficiency            63.1 %
+chamber pressure              19.4 .. 185.4 kPa
+ejected steam temperature    297.3 degC (peak vapour 304.0 degC)
+peak surface temperature     111.4 degC
+min superheat                 -0.0 K
+drive pressure amplitude      84.8 kPa
+cycle energy closure      -6.7e-06

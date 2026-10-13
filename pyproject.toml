@@ -4,8 +4,8 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "liquid-piston-0d"
-version = "0.2.0"
-description = "0D model of a liquid piston oscillating in a U-tube with a vapour chamber"
+version = "0.3.0"
+description = "0D models of liquid-piston steam generators: open oscillator and U-tube"
 requires-python = ">=3.12"
 dependencies = ["numpy>=1.26", "scipy>=1.11", "matplotlib>=3.8"]
 

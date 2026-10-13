@@ -1,11 +1,17 @@
-"""0D model of a liquid piston oscillating in a U-tube with a vapour chamber."""
+"""0D models of liquid-piston steam generators (inertial evaporators).
 
-from .model import G, KinematicDrive, Model, Params, PressureDrive, Result, simulate
-from .analysis import balances, cycle_metrics, run_to_periodic
-from .cases import REFERENCE, reference_drive
+Subpackages
+-----------
+utube            symmetric U-tube with a closed vapour chamber
+open_oscillator  high pipe + side tank with a gas cushion (open oscillator)
 
-__all__ = [
-    "G", "KinematicDrive", "Model", "Params", "PressureDrive", "Result", "simulate",
-    "balances", "cycle_metrics", "run_to_periodic", "REFERENCE", "reference_drive",
-]
-__version__ = "0.2.0"
+Shared modules
+--------------
+properties       IAPWS-IF97 saturation and a consistent caloric model
+valve            compressible orifice flow for the ejection valve
+"""
+
+from . import open_oscillator, properties, utube, valve
+
+__all__ = ["open_oscillator", "properties", "utube", "valve"]
+__version__ = "0.3.0"
