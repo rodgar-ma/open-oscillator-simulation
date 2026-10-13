@@ -1,10 +1,13 @@
 name: hydram
 channels:
-  - defaults
+  - conda-forge
 dependencies:
-  - scipy
+  - python=3.12
   - numpy
-  - coolprop
+  - scipy
   - matplotlib
   - pytest
-  - python=3.12
+  - coolprop
+  - pip
+  - pip:
+      - -e .

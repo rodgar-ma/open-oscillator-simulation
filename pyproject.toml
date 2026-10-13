@@ -1,10 +1,19 @@
-[project]
-name = "utube"
-version = "0.1.0"
-
 [build-system]
-requires = ["setuptools"]
+requires = ["setuptools>=68"]
 build-backend = "setuptools.build_meta"
+
+[project]
+name = "liquid-piston-0d"
+version = "0.2.0"
+description = "0D model of a liquid piston oscillating in a U-tube with a vapour chamber"
+requires-python = ">=3.12"
+dependencies = ["numpy>=1.26", "scipy>=1.11", "matplotlib>=3.8"]
+
+[project.optional-dependencies]
+test = ["pytest>=8", "CoolProp>=6.6"]
 
 [tool.setuptools.packages.find]
 where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

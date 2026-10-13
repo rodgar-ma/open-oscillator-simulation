@@ -1,0 +1,13 @@
+period                        2.498 s   (stroke 3.69 .. 8.21 m)
+steam ejected / cycle          35.8 g   (51.6 kg/h)
+flash / wall cond / surf cond  57.6 / 15.2 / 25.0 g
+net steam power               39.11 kW
+drive work / cycle            51.17 kJ  (hydraulic losses 30.83)
+waste heat / cycle            50.89 kJ
+COP (steam / drive work)       1.91
+2nd-law efficiency             25.9 %
+steam pressure                 18.7 .. 133.9 kPa  (ratio 7.2)
+gas cushion pressure           57.4 .. 158.3 kPa
+ejected steam temperature     261.1 degC
+peak wall temperature          61.7 degC
+cycle energy closure       -1.1e-05
