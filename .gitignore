@@ -31,9 +31,9 @@ htmlcov/
 Thumbs.db
 .DS_Store
 
-# Figuras generadas por los scripts (regenerables)
-figures/
+# Vídeos generados por los scripts (regenerables; PNG y GIF se versionan para el README)
+figures/**/*.mp4
 
-# AI
-CONTEXT.md
-fisica_evaporador_inercial.pdf
+# Documentation
+docs/
+

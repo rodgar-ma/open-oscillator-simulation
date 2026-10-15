@@ -21,6 +21,10 @@ been validated against measurements.
 
 ![Open oscillator animation](figures/open_oscillator/animation.gif)
 
+*Open oscillator, reference case: the slug moves between the high pipe and the
+side tank, flashes on the way down, compresses the steam on the way up and
+ejects it through the check valve.*
+
 ## Repository layout
 
 ```
@@ -82,7 +86,8 @@ python scripts/utube/animate.py                 # -> figures/utube/animation.mp4
 The animation scripts take the main operating parameters on the command line
 (for example `--t-bulk 65 --h-cond 2000` for the open oscillator, or
 `--t-bulk 70 --stroke 1.4` for the U-tube), and `--show` opens an interactive
-window instead of saving a file.
+window instead of saving a file. The GIFs shown in this README are rendered
+with `--out figures/<model>/animation.gif`.
 
 ## Shared building blocks
 
@@ -120,6 +125,11 @@ COP 1.9. Hydraulic losses take 60 % of the drive work.
 
 ![Open oscillator sensitivity](figures/open_oscillator/sensitivity.png)
 
+*One-at-a-time sensitivity of net steam power and COP to the wall condensation
+coefficient `h_cond`, the high-pipe diameter (similar geometry, for two values
+of `h_cond`), the waste-heat temperature and the assist pressure. Dotted lines
+mark the reference case.*
+
 - **Wall condensation is the dominant uncertainty.** Output falls steeply with
   `h_cond` and stops between 1,000 and 3,000 W/m²K. Clean film condensation on
   bare steel would be higher still, so the real effective value is something
@@ -134,6 +144,12 @@ COP 1.9. Hydraulic losses take 60 % of the drive work.
 A symmetric U-tube whose leg 1 ends in a closed vapour chamber. The cycle study
 prescribes the column motion (kinematic drive) so stroke and frequency are
 controlled exactly; a pressure drive is also available.
+
+![U-tube animation](figures/utube/animation.gif)
+
+*U-tube, reference case: schematic with vapour and surface temperatures (left),
+and chamber pressure, p-V loop, temperatures and mass flows over two periodic
+cycles (right).*
 
 | Sub-model | Approach | Switch |
 | --- | --- | --- |
@@ -152,7 +168,25 @@ second-law efficiency 63 %.
 
 ![U-tube cycle](figures/utube/cycle.png)
 
+*Time traces over one periodic cycle.*
+
+![U-tube p-V diagram](figures/utube/pv.png)
+
+*p-V diagram of the vapour chamber. Compression stays just below the isentrope
+from maximum volume; the valve is open (red) while the chamber is above the
+outlet pressure.*
+
+![U-tube energy balance](figures/utube/energy.png)
+
+*First law over one cycle: 60 kJ of compression work and 9 kJ of friction heat
+plus 207 kJ of waste heat leave as 276 kJ of net steam enthalpy.*
+
 ![U-tube sensitivity](figures/utube/sensitivity.png)
+
+*One-at-a-time sensitivity of net steam power and work share to bulk
+temperature, stroke, wall and layer-to-bulk heat transfer, surface layer
+thickness, flash-boiling area, drive frequency and accommodation coefficient.
+Dotted lines mark the reference case.*
 
 1. **Free-surface evaporation alone cannot refill the chamber**; bulk flash
    boiling is necessary, and the result saturates once the bubble interface is
@@ -180,6 +214,10 @@ the right-hand sides, so a sign or reference error shows up as a closure error.
 | `open_oscillator/` | Conservative limit to 1e-9 (variable inertia), linearised frequency, reference limit cycle, first and second law, small-pipe finding |
 
 ![U-tube verification](figures/utube/verification.png)
+
+*Rungs 1 to 4: energy error of the frictionless U-tube, friction decay against
+the analytic envelope, drift of p V^γ in the gas spring, and relaxation of a
+still chamber to p_sat.*
 
 ## Physics notes
 
