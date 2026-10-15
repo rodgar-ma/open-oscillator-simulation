@@ -1,4 +1,4 @@
-# liquid-piston-0d
+# Open Oscillator Simulation
 
 Zero-dimensional models of liquid-piston steam generators (inertial
 evaporators): a column of warm water oscillates, flashes into a low-pressure
