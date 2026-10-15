@@ -1,12 +1,13 @@
 # Open Oscillator Simulation
 
-Zero-dimensional models of liquid-piston steam generators (inertial
-evaporators): a column of warm water oscillates, flashes into a low-pressure
-steam space when it falls, compresses that steam when it rises, and ejects it
-through a check valve above the outlet pressure.
+Zero-dimensional simulation of an open oscillator, a liquid-piston steam
+generator (inertial evaporator): a column of warm water oscillates, flashes
+into a low-pressure steam space when it falls, compresses that steam when it
+rises, and ejects it through a check valve above the outlet pressure.
 
-The repository contains two models that share the same property and valve
-code:
+The open oscillator is the main model. A simpler U-tube model, which shares the
+same property and valve code, is kept alongside it as a reference. Both live in
+the Python package `liquid_piston`:
 
 | Model | Architecture | Package |
 | --- | --- | --- |
@@ -70,6 +71,8 @@ print(cycle_metrics(res).summary())
 ## Quick start
 
 ```bash
+git clone https://github.com/rodgar-ma/open-oscillator-simulation.git
+cd open-oscillator-simulation
 conda env create -f environment.yml   # creates the "hydram" environment, Python 3.12
 conda activate hydram
 pytest                                # 42 tests, ~80 s
